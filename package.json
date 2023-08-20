@@ -1,0 +1,19 @@
+{
+  "name": "zad_rek",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "bigger-picture": "^1.1.11",
+    "bootstrap": "^5.3.1",
+    "macy": "^2.5.1"
+  }
+}
