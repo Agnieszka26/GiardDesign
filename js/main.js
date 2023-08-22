@@ -22,7 +22,6 @@ const imagesContent = [
 
 ];
 const openGallery = (e) => {
-  console.log("openGallery e.currentTarget", e.currentTarget);
   e.preventDefault();
   bp.open({
     items: imageLinks,
@@ -31,7 +30,7 @@ const openGallery = (e) => {
   });
 };
 
-const imagesLoad = () => {
+const cerateImages = () => {
   imagesContent.forEach((url) => {
     const imageLink = document.createElement("a");
     const imageElement = document.createElement("img");
@@ -47,10 +46,9 @@ const imagesLoad = () => {
     imageLink.appendChild(imageElement);
     imageContainer.appendChild(imageLink);
   });
-
-  console.log(imageContainer);
 };
-imagesLoad();
+
+cerateImages();
 
 const imageLinks = document.querySelectorAll("#images >  a:last-child");
 const buttonLoadMore = document.getElementById("loadMore");
@@ -76,7 +74,7 @@ const masonry = Macy({
 });
 
 const loadMoreImages = () => {
-  newImages.forEach((imageUrl) => {
+  newImages.forEach((imageUrl, index) => {
     const imageLink = document.createElement("a");
     const imageElement = document.createElement("img");
 
@@ -87,7 +85,7 @@ const loadMoreImages = () => {
     imageLink.dataset.width = "3000";
     imageLink.dataset.alt = "New project image";
     imageElement.src = imageUrl;
-    imageElement.alt = "New project image";
+    imageElement.alt = `New project image ${index}`;
 
     imageLink.appendChild(imageElement);
     imagesContainer.appendChild(imageLink);
