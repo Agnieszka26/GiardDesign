@@ -7,7 +7,52 @@ const newImages = [
   "./public/images/project13.jpg",
 ];
 
-const imageLinks = document.querySelectorAll("#images > a");
+const imageContainer = document.getElementById("images");
+const imagesContent = [
+  "./public/images/project1.png",
+  "./public/images/project2.png",
+  "./public/images/project3.png",
+  "./public/images/project4.png",
+  "./public/images/project5.png",
+  "./public/images/project6.png",
+  "./public/images/project8.png",
+  "./public/images/project9.png",
+  "./public/images/project10.png",
+  "./public/images/project11.png",
+
+];
+const openGallery = (e) => {
+  console.log("openGallery e.currentTarget", e.currentTarget);
+  e.preventDefault();
+  bp.open({
+    items: imageLinks,
+
+    el: e.currentTarget,
+  });
+};
+
+const imagesLoad = () => {
+  imagesContent.forEach((url) => {
+    const imageLink = document.createElement("a");
+    const imageElement = document.createElement("img");
+
+    imageLink.href = url;
+    imageLink.dataset.img = `${url} 1800w, ${url} 3000w`;
+    imageLink.dataset.thumb = url;
+    imageLink.dataset.height = "2000";
+    imageLink.dataset.width = "3000";
+    imageLink.dataset.alt = url;
+    imageElement.src = url;
+    imageElement.alt = url;
+    imageLink.appendChild(imageElement);
+    imageContainer.appendChild(imageLink);
+  });
+
+  console.log(imageContainer);
+};
+imagesLoad();
+
+const imageLinks = document.querySelectorAll("#images >  a:last-child");
 const buttonLoadMore = document.getElementById("loadMore");
 const imagesContainer = document.getElementById("images");
 const sectionContainer = document.getElementById("realizacje");
@@ -30,17 +75,8 @@ const masonry = Macy({
   },
 });
 
-const openGallery = (e) => {
-  e.preventDefault();
-  bp.open({
-    items: imageLinks,
-    el: e.currentTarget,
-  });
-};
-
 const loadMoreImages = () => {
   newImages.forEach((imageUrl) => {
-
     const imageLink = document.createElement("a");
     const imageElement = document.createElement("img");
 
@@ -63,8 +99,8 @@ const loadMoreImages = () => {
   buttonLoadMore.style.display = "none";
 };
 
-  for (let link of imageLinks) {
-    link.addEventListener("click", openGallery);
-  }
-  
-  buttonLoadMore.addEventListener("click", loadMoreImages);
+for (let link of imageLinks) {
+  link.addEventListener("click", openGallery);
+}
+
+buttonLoadMore.addEventListener("click", loadMoreImages);
