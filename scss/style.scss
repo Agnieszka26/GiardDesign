@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500&display=swap");
-
-// Create SCSS variables
 $white: #ffffff;
 $black: #111;
 $primary: #1b5b31;
@@ -8,12 +6,14 @@ $greenLighter: #4e9c6a;
 $secondary: #dcc1ab;
 $dark: #2f2f2f;
 $light: #f5f0ec;
-// $lighter: #eff2f1;
-// $body_color: #6a6a6a;
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
-
 $font-family: "Inter", sans-serif;
+
+@media  (min-width: 600px) {}
+@media (min-width: 768px) {}
+
+@media  (min-width: 992px) {}

@@ -29,7 +29,7 @@ const createCardElement = ({ src, title, description }) => {
   cardDiv.classList.add("col-lg-4", "col-md-12");
 
   const innerCardDiv = document.createElement("div");
-  innerCardDiv.classList.add("card", "custom-card");
+  innerCardDiv.classList.add("card", "custom-card", "m-auto");
 
   const cardBodyDiv = document.createElement("div");
   cardBodyDiv.classList.add("card-body");
@@ -63,6 +63,7 @@ const createCardElement = ({ src, title, description }) => {
   cardLink.appendChild(learnMoreSpan);
 
   cardBodyDiv.appendChild(imageContainer);
+  imageContainer.appendChild(image)
   cardBodyDiv.appendChild(cardTitle);
   cardBodyDiv.appendChild(cardDescription);
   cardBodyDiv.appendChild(cardLink);
