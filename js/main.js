@@ -2,23 +2,23 @@ import BiggerPicture from "bigger-picture";
 import Macy from "macy";
 
 const newImages = [
-  "./public/images/project12.jpg",
-  "./public/images/project14.jpg",
-  "./public/images/project13.jpg",
+  "./images/project12.jpg",
+  "./images/project14.jpg",
+  "./images/project13.jpg",
 ];
 
 const imageContainer = document.getElementById("images");
 const imagesContent = [
-  "./public/images/project1.png",
-  "./public/images/project2.png",
-  "./public/images/project3.png",
-  "./public/images/project4.png",
-  "./public/images/project5.png",
-  "./public/images/project6.png",
-  "./public/images/project8.png",
-  "./public/images/project9.png",
-  "./public/images/project10.png",
-  "./public/images/project11.png",
+  "./images/project1.png",
+  "./images/project2.png",
+  "./images/project3.png",
+  "./images/project4.png",
+  "./images/project5.png",
+  "./images/project6.png",
+  "./images/project8.png",
+  "./images/project9.png",
+  "./images/project10.png",
+  "./images/project11.png",
 
 ];
 const openGallery = (e) => {
